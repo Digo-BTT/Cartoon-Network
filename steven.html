@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="steven.css">
+    <link rel="icon" type="image/png" href="imgs/favicon.ico">
+    <title>Cartoon Network</title>
+</head>
+
+<body>
+    <div class="curtain curtain-left" id="curtainLeft"></div>
+    <div class="curtain curtain-right" id="curtainRight"></div>
+
+    <header id="content">
+        <nav id="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo-cartoon.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="meio">
+                <div>
+                    <a href="conheca.html" style="text-decoration: none; color: rgb(255, 255, 255)">
+                        <p>Conheça-nos</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="series.html" style="text-decoration: none; color: rgb(255, 255, 255)">
+                        <p>Séries</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="filmes.html" style="text-decoration: none; color: rgb(255, 255, 255)">
+                        <p>Filmes</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="personagens.html" style="text-decoration: none; color: rgb(255, 255, 255)">
+                        <p>Personagens</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="as.html" style="text-decoration: none; color: rgb(255, 255, 255)">
+                        <p>[AS]</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="direita">
+                <div>
+                    <a href="https://play.max.com/standalone/50141f76-9a4a-436b-abcf-82cf5f24104e"
+                        style="text-decoration: none; color: rgb(255, 255, 255)">
+                        <p>Assista agora</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="" style="text-decoration: none; color: rgb(255, 255, 255)">
+                        <p>EN</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="login.html" style="text-decoration: none; color: rgb(255, 255, 255)">
+                        <p>Login</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="serie">
+
+            <div class="logo-serie">
+                <img src="imgs/poster-steven.jpg" alt="steven">
+            </div>
+
+            <div class="txt">
+
+
+                <div class="nome">
+                    <img src="imgs/Steven_Universe_logo.webp" alt="steven">
+                </div>
+
+                <div class="info">
+                    <div class="diretor">
+                        <p>Diretor:</p>
+                        <p>Sergei Eisenstein</p>
+                    </div>
+                    <div class="ano">
+                        <p>Ano:</p>
+                        <p>2015</p>
+                    </div>
+                    <div class="duracao">
+                        <p>Temporadas:</p>
+                        <p> 7 temporadas </p>
+                    </div>
+                    <div class="pais">
+                        <p>País:</p>
+                        <p>USA</p>
+                    </div>
+                </div>
+
+                <div class="sinopse">
+                    <p>Em Steven Universe, a Terra é protegida por uma equipe de guardiãs Gems, as Crystal Gems. A fonte
+                        de sua magia provém das pedras preciosas presas a seus corpos que conferem habilidades mágicas.
+                        A princípio, as Gems integrantes desse grupo são: Garnet, Pérola, Ametista e Steven. Este último
+                        é o mais novo delas, uma vez que herdou a pedra de sua mãe, Rose Quartz, no dia de seu
+                        nascimento. Enquanto ele tenta descobrir os segredos por trás de sua pedra, Steven passeia por
+                        Beach City ou por diferentes mundos com as Gems, seja divertindo-se ou saindo em missões para
+                        salvar o mundo de ameaças.</p>
+                </div>
+
+                <div class="watch">
+                    <button> Assista agora </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/6109173d4e.js" crossorigin="anonymous"></script>
+    <script src="../js/scrollreveal.js"></script>
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                document.getElementById("curtainLeft").style.transform =
+                    "translateX(-100%)";
+                document.getElementById("curtainRight").style.transform =
+                    "translateX(100%)";
+            }, 500);
+
+            setTimeout(() => {
+                document.getElementById("content").style.opacity = "1";
+            }, 2000);
+        };
+    </script>
+</body>
+
+</html>
