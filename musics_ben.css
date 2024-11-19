@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Carter+One&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 80px;
+    max-width: 80px;
+    margin-top: 15px;
+    margin-left: 190px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    height: 8vh;
+    z-index: 100;
+    position: relative;
+}
+
+nav a {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    z-index: 101;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    position: relative;
+}
+
+.nav-list li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    border-bottom: 0.125rem solid rgb(255, 255, 255);
+    transform: scaleX(0);
+    transition: transform 1.5s ease;
+}
+
+.nav-list li:hover::after {
+    transform: scaleX(1);
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.direita {
+    justify-content: center;
+    align-items: center;
+}
+
+.direita button {
+    padding: 10px 15px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 30px;
+    border-radius: 12px;
+    border: none;
+    transition: 0.4s ease, transform 0.3s ease;
+}
+
+.direita button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+}
+
+.direita button:hover {
+    transition: 0.6s ease;
+    background: linear-gradient(180deg, #1E90FF, #00BFFF, #ffffff);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+main {
+    width: 100%;
+    background-image: url(imgs/musics_fundo_ben.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.music {
+    display: flex;
+    width: 100%;
+    min-height: 92vh;
+    padding-inline: 100px;
+}
+
+.music_esq {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_dir {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.music_dir h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    padding-bottom: 40px;
+}
+
+.music_dir p {
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.apps_music {
+    display: flex;
+    gap: 35px;
+}
+
+.apps_music a {
+    text-decoration: none;
+}
+
+.apps_music i {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.8rem;
+    width: 2.8rem;
+}
+
+#spotify {
+    background-color: #1ED760;
+    border-radius: 50%;
+}
+
+#you {
+    background-color: red;
+    border-radius: 50%
+}
+
+#deezer {
+    background: linear-gradient(90deg, #9d1bb2, #ed348f, #42c2a6, #4286f4);
+    border-radius: 50%
+}
+
+#apple {
+    background-color: #000000;
+    border-radius: 50%
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 400px;
+    padding-block: 50px;
+    background: linear-gradient(to top, #000000, #000001);
+}
+
+.cima {
+    flex: 50%;
+    display: flex;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.cima p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.baixo {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquerda {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquerda h1 {
+    color: white;
+    font-size: 1.9rem;
+    padding-bottom: 55px;
+}
+
+.redessociais {
+    display: flex;
+    gap: 40px;
+}
+
+.redessociais a {
+    text-decoration: none;
+}
+
+.redessociais i {
+    font-size: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.8rem;
+    width: 2.8rem;
+}
+
+.redessociais i:hover {
+    opacity: 0.8;
+}
+
+#insta {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    border-radius: 50%;
+}
+
+#you {
+    background-color: red;
+    border-radius: 50%
+}
+
+#twt {
+    background-color: #0099ff;
+    border-radius: 50%
+}
+
+#face {
+    background-color: #4267b3;
+    border-radius: 50%
+}
+
+.dir {
+    flex: 50%;
+    padding-inline: 30px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    user-select: none;
+}
+
+.dir img {
+    width: 40%;
+}
+
+.copy p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1342px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .logo img{
+        margin-left: 0;
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 70vh;
+        padding-block: 30px;
+        border-bottom-left-radius: 20px;
+        background: linear-gradient(to bottom, #000000, #000001);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    nav a{
+      font-size: 1.3rem;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .music {
+        flex-direction: column-reverse;
+        padding-inline: 40px;
+        padding-block: 130px;
+    }
+
+    .music_esq, .music_dir {
+        flex: none;
+    }
+
+    .music_dir {
+        margin-left: 0px;
+    }
+
+    .music_dir h1 {
+        font-size: 1.9rem;
+        padding-bottom: 35px;
+    }
+
+    .apps_music {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .apps_music i {
+        font-size: 15px;
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+
+    footer {
+        padding-inline: 40px;
+        padding-block: 70px;
+    }
+
+    .baixo {
+        flex-direction: column;
+    }
+
+    .dir img {
+        width: 45%;
+    }
+
+    .copy p {
+        font-size: 1.1rem;
+    }
+
+    .esquerda h1{
+        padding-bottom: 40px;
+    }
+
+    .redessociais i {
+        height: 2.3rem;
+        width: 2.3rem;
+        font-size: 20px;
+    }
+
+    .copy p {
+        text-align: justify;
+    }
+
+    .direita{
+        display: none;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 1342px) {
+    .dir img {
+        width: 20%;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}

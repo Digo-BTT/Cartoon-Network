@@ -1,0 +1,818 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Carter+One&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Carter+One&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Carter+One&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Irish+Grover&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.curtain {
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    background-color: #000000;
+    top: 0;
+    transition: transform 2s cubic-bezier(0.5, 0, 0, 1);
+    z-index: 1;
+}
+
+.curtain-left {
+    left: 0;
+    transform-origin: left;
+}
+
+.curtain-right {
+    right: 0;
+    transform-origin: right;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 80px;
+    max-width: 80px;
+    margin-top: 15px;
+    margin-left: 190px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    height: 8vh;
+    z-index: 100;
+    position: relative;
+}
+
+nav a {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    z-index: 101;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    position: relative;
+}
+
+.nav-list li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    border-bottom: 0.125rem solid rgb(255, 255, 255);
+    transform: scaleX(0);
+    transition: transform 1.5s ease;
+}
+
+.nav-list li:hover::after {
+    transform: scaleX(1);
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.direita {
+    justify-content: center;
+    align-items: center;
+}
+
+.direita button {
+    padding: 10px 15px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 30px;
+    border-radius: 12px;
+    border: none;
+    transition: 0.4s ease, transform 0.3s ease;
+}
+
+.direita button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+}
+
+.direita button:hover {
+    transition: 0.6s ease;
+    background: linear-gradient(180deg, #1E90FF, #00BFFF, #ffffff);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cn {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 92vh;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-image: url(as/rick.gif);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.cntxt {
+    margin-left: 40px;
+    padding: 5px 10px;
+    margin-bottom: 40px;
+}
+
+.cntxt img {
+    width: 50%;
+}
+
+.select {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-image: url(as/select.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.txtesq {
+    flex: 50%;
+    height: 60%;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 40px;
+    margin-left: 40px;
+    padding: 20px 20px;
+}
+
+.txtesq h1 {
+    margin-top: 150px;
+    font-size: 1.7rem;
+    color: #ffffff;
+    padding: 20px 20px;
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.selectdir {
+    flex: 50%;
+    display: flex;
+    margin-left: 200px;
+}
+
+.esquerda {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 80%;
+}
+
+.direitaselect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 20%;
+    flex-direction: column;
+}
+
+.direitaselect img {
+    width: 40%;
+    margin: 20px;
+    border-radius: 10px;
+    transition: 0.2s;
+    border: solid 1.5px rgb(0, 0, 0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.direitaselect img:hover {
+    transform: scale(1.06);
+}
+
+.esquerda img {
+    width: 70%;
+    border-radius: 20px;
+    transition: transform 0.6s ease-in-out;
+    border: solid white 2px;
+}
+
+.esquerda img:hover {
+    transform: scale(1.04);
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.scroll {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    margin-top: 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.page1 {
+    background-image: url(as/gaiola.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+
+.page2 {
+    background-image: url(as/fundo_charlie.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+
+.page3 {
+    background-image: url(as/napo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+
+.page4 {
+    background-image: url(as/star.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.page5 {
+    background-image: url(as/bichos.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.page2 h1,
+.page4 h1,
+.page5 h1 {
+    margin-left: 20px;
+}
+
+.caixas {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    background-image: url(as/wtf.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.caixas1 {
+    flex: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-align: center;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.caixas2 {
+    flex: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: center;
+    flex-direction: column;
+}
+
+.caixas h1 {
+    width: 50%;
+    color: #ffffff;
+    text-align: justify;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+}
+
+.caixas1 img {
+    width: 25%;
+    margin-right: 90px;
+}
+
+.caixas2 img {
+    width: 20%;
+    margin-left: 90px;
+}
+
+.serie {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(as/fogo.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.serie h1 {
+    font-size: 4.2rem;
+    color: #ffffff;
+    padding: 20px 20px;
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 9px;
+    margin-top: 30px;
+}
+
+.serie button {
+    padding: 20px 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 12px;
+    border: none;
+    transition: 0.4s ease, transform 0.3s ease;
+}
+
+.serie button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.serie button:hover {
+    transition: 0.6s ease;
+    background: linear-gradient(180deg, #000000, #000000, #ffffff);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.eai {
+    display: flex;
+    margin-top: 40px;
+    gap: 80px;
+}
+
+.gato img{
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 60%;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-inline: 400px;
+    padding-block: 50px;
+    background: linear-gradient(to top, #000000, #000001);
+}
+
+.cima {
+    flex: 50%;
+    display: flex;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.cima p {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.baixo {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquerda {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquerda h1 {
+    color: white;
+    font-size: 1.9rem;
+    padding-bottom: 55px;
+}
+
+.redessociais {
+    display: flex;
+    gap: 40px;
+}
+
+.redessociais a {
+    text-decoration: none;
+}
+
+.redessociais i {
+    font-size: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.8rem;
+    width: 2.8rem;
+}
+
+.redessociais i:hover {
+    opacity: 0.8;
+}
+
+#insta {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    border-radius: 50%;
+}
+
+#you {
+    background-color: red;
+    border-radius: 50%
+}
+
+#twt {
+    background-color: #0099ff;
+    border-radius: 50%
+}
+
+#face {
+    background-color: #4267b3;
+    border-radius: 50%
+}
+
+.dir {
+    flex: 50%;
+    padding-inline: 30px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    user-select: none;
+}
+
+.dir img {
+    width: 40%;
+}
+
+.copy p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1342px) {
+
+    .body{
+        overflow-x: hidden;
+    }
+
+    .logo img {
+        margin-left: 0;
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 7vh;
+        right: 0;
+        width: 50vw;
+        height: 70vh;
+        padding-block: 30px;
+        border-bottom-left-radius: 20px;
+        background: linear-gradient(to bottom, #000000, #000001);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    footer {
+        padding-inline: 40px;
+        padding-block: 70px;
+    }
+
+    .baixo {
+        flex-direction: column;
+    }
+
+    .dir img {
+        width: 45%;
+    }
+
+    .copy p {
+        font-size: 1.1rem;
+    }
+
+    .esquerda h1 {
+        padding-bottom: 40px;
+    }
+
+    .redessociais i {
+        height: 2.3rem;
+        width: 2.3rem;
+        font-size: 20px;
+    }
+
+    .copy p {
+        text-align: justify;
+    }
+
+    .direita {
+        display: none;
+    }
+
+    .cn {
+        background-image: url(as/gif_cell.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top
+    }
+
+    .cntxt {
+        font-size: 1.4rem;
+
+    }
+
+    .cntxt img {
+        width: 60%;
+        padding: 10px 10px;
+        border-radius: 5px;
+        margin-left: 40px;
+        background-color: #ffffff;
+    }
+
+    .selectdir {
+        display: none;
+    }
+
+    .txtesq {
+        margin-right: 50px;
+        margin-bottom: 100px;
+        padding: 3px 1px;
+        background-color: transparent;
+    }
+
+    .txtesq h1 {
+        font-size: 1.2rem;
+    }
+
+    .scroll h1 {
+        font-size: 1.6rem;
+        margin: 6px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .page1 {
+        background-image: url(as/cell1.jpg);
+    }
+
+    .page2 {
+        background-image: url(as/cell2.jpg);
+        background-position: center;
+    }
+
+    .page3 {
+        background-image: url(as/cell3.jpg);
+        background-position: center;
+    }
+
+    .page4 {
+        background-image: url(as/cell4.jpg);
+    }
+
+    .page5 {
+        background-image: url(as/cell5.jpg);
+    }
+
+    .caixas {
+        flex-direction: column;
+        background-image: url(as/cell6.jpg);
+        background-position: center;
+        padding: 50px;
+    }
+
+    .caixas1 img {
+        width: 50%;
+        margin-bottom: 40px;
+        margin-left: 100px;
+    }
+
+    .caixas1 {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caixas2 {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caixas2 img {
+        width: 50%;
+        margin-right: 100px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .caixas h1 {
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+    }
+
+    .serie h1 {
+        font-size: 2.7rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: 20px;
+    }
+
+    .gato{
+        display: flex;
+        justify-content: center;
+    }
+
+    .gato img{
+        width: 40%;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+
+    .eai{
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .serie button{
+        padding: 10px 10px;
+    }
+
+    .serie button a {
+font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 550px) and (max-width: 1342px) {
+    .dir img {
+        width: 20%;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
